@@ -37,6 +37,8 @@ enum Day: String, CaseIterable, Identifiable {
 
 struct AlarmDetailScreen: View {
     
+    @Binding var names: [Date]
+    
     
     @State var selectedDate: Date = Date()
     @State var selectedDays: [Day] = []
@@ -169,6 +171,8 @@ struct AlarmDetailScreen: View {
     
     private var saveButton: some View {
         Button("Save") {
+            names.append(selectedDate)
+            let _: () = DatabaseManager.shared.save()
             
             // handle tap save
         }
@@ -185,6 +189,6 @@ struct AlarmDetailScreen: View {
 
 struct AlarmDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmDetailScreen()
+        AlarmDetailScreen(names: .constant([Date()]))
     }
 }

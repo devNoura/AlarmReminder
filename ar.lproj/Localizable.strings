@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  AlarmApp
+
+  Created by Noura Mohammad Althrowi on 18/06/1444 AH.
+  
+*/
+"No Alarms"= "لا يوجد منبهات";
+"Alarm" = "المنبه";
+"Edit" = "تعديل";
+"Sun"="الأحد";
+"Mon"="الإثنين";
+"Tue"="الثلاثاء";
+"Wed"="الإربعاء";
+"Thu"="الخميس";
+"Fri"="الجمعة";
+"Sat"="السبت";
+"Add Alarm"="إضافة منبه";
+"Snooze"="غفوة";
+"Manage Tasks"="إدارة المهام";
+"Choose Time"="اختيار الوقت";
+"Save"="حفظ";
+"Cancel"="إلغاء";
+"Tasks"="المهام";
+"Cancel"="إلغاء";

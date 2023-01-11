@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  AlarmApp
+
+  Created by Noura Mohammad Althrowi on 18/06/1444 AH.
+  
+*/
+"No Alarms"= "No Alarms";
+"Alarm" = "Alarm";
+"Edit" = "Edit";
+"Sun"="Sun";
+"Mon"="Mon";
+"Tue"="Tue";
+"Wed"="Wed";
+"Thu"="Thu";
+"Fri"="Fri";
+"Sat"="Sat";
+"Add Alarm"="Add Alarm";
+"Snooze"="Snooze";
+"Manage Tasks"="Manage Tasks";
+"Choose Time"="Choose Time";
+"Save"="Save";
+"Cancel"="Cancel";
+"Tasks"="Tasks";
+"Cancel"="Cancel";
+

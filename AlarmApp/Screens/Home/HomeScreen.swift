@@ -9,11 +9,12 @@ import SwiftUI
 
 struct HomeScreen: View {
     @State private var showAlarmDetail: Bool = false
-    
+    @State var selection = Set<String>()
+    @State var names: [Date] = [Date()]
     var body: some View {
         NavigationView {
             
-            ScrollView {
+            VStack {
                 VStack(alignment: .leading) {
                     dateLabel
                     
@@ -22,25 +23,50 @@ struct HomeScreen: View {
                 }
                 .padding(.horizontal)
                 
-                VStack {
-                    Text("No Alarms")
-                    
-                        .font(.system(size: 20, weight: .medium, design: .default))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                        .padding(.trailing)
-                        .padding(20)
-                    .foregroundColor(Color("text"))
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 360,height: 1)
+                if names.count == 0 {
+                    VStack {
+                        Text("No Alarms")
+                        
+                            .font(.system(size: 20, weight: .medium, design: .default))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                            .padding(.trailing)
+                            .padding(20)
                         .foregroundColor(Color("text"))
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 360,height: 1)
+                            .foregroundColor(Color("text"))
+                    }
+                } else {
+                    List(names, id: \.self, selection: $selection) { name in
+                        VStack {
+                            Rectangle()
+                                .foregroundColor(Color("circle"))
+                                .frame(height: 80)
+                                .padding(.top)
+                                .overlay {
+                                    Text("name")
+                                }
+                            Toggle("User has been contacted",isOn: .constant(true))
+                                .toggleStyle(CheckToggleStyle())
+                            Toggle("", isOn: .constant(true))
+                        }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                    }
+                    
+                    .scrollContentBackground(.hidden)
+                    .listStyle(.plain)
+                    .foregroundColor(Color("text"))
+                    .padding(.top)
+                    .padding(.horizontal)
                 }
                     
                     
             }
             .navigationTitle(Text("Alarm"))
             .sheet(isPresented: $showAlarmDetail, content: {
-                AlarmDetailScreen()
+                AlarmDetailScreen(names: $names)
             })
 //            .tint(Color("text"))
             

@@ -18,6 +18,10 @@
 		FA6386AD296DE54A00A08BFD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386AC296DE54A00A08BFD /* DatabaseManager.swift */; };
 		FA6386AF296DE8EB00A08BFD /* Database+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386AE296DE8EB00A08BFD /* Database+Operations.swift */; };
 		FA6386B2296DED0700A08BFD /* TaskObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386B1296DED0700A08BFD /* TaskObject+Extension.swift */; };
+		FA6386BB296E9E0E00A08BFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6386BD296E9E0E00A08BFD /* Localizable.strings */; };
+		FA6386C1296EB65400A08BFD /* SavedAlarmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386C0296EB65400A08BFD /* SavedAlarmList.swift */; };
+		FA6386C3296EB72900A08BFD /* SavedAlarmLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386C2296EB72900A08BFD /* SavedAlarmLists.swift */; };
+		FA6386C6296EB7F100A08BFD /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6386C5296EB7F100A08BFD /* ToggleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,11 @@
 		FA6386AC296DE54A00A08BFD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FA6386AE296DE8EB00A08BFD /* Database+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database+Operations.swift"; sourceTree = "<group>"; };
 		FA6386B1296DED0700A08BFD /* TaskObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskObject+Extension.swift"; sourceTree = "<group>"; };
+		FA6386BC296E9E0E00A08BFD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA6386BE296E9E1800A08BFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA6386C0296EB65400A08BFD /* SavedAlarmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlarmList.swift; sourceTree = "<group>"; };
+		FA6386C2296EB72900A08BFD /* SavedAlarmLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAlarmLists.swift; sourceTree = "<group>"; };
+		FA6386C5296EB7F100A08BFD /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 		FA638640296C46CF00A08BFD = {
 			isa = PBXGroup;
 			children = (
+				FA6386BD296E9E0E00A08BFD /* Localizable.strings */,
 				FA63864B296C46CF00A08BFD /* AlarmApp */,
 				FA63864A296C46CF00A08BFD /* Products */,
 			);
@@ -88,6 +98,8 @@
 				FA6386A5296DB38F00A08BFD /* Home */,
 				FA6386A6296DB3B800A08BFD /* Detail */,
 				FA63867F296D3C8A00A08BFD /* AlarmOn.swift */,
+				FA6386C4296EB7C700A08BFD /* ToggleView */,
+				FA6386BF296EB60B00A08BFD /* SavedAlarm */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -126,6 +138,23 @@
 				FA6386B1296DED0700A08BFD /* TaskObject+Extension.swift */,
 			);
 			path = "Entity+Extensions";
+			sourceTree = "<group>";
+		};
+		FA6386BF296EB60B00A08BFD /* SavedAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				FA6386C2296EB72900A08BFD /* SavedAlarmLists.swift */,
+				FA6386C0296EB65400A08BFD /* SavedAlarmList.swift */,
+			);
+			path = SavedAlarm;
+			sourceTree = "<group>";
+		};
+		FA6386C4296EB7C700A08BFD /* ToggleView */ = {
+			isa = PBXGroup;
+			children = (
+				FA6386C5296EB7F100A08BFD /* ToggleView.swift */,
+			);
+			path = ToggleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +199,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = FA638640296C46CF00A08BFD;
 			productRefGroup = FA63864A296C46CF00A08BFD /* Products */;
@@ -187,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA638654296C46D000A08BFD /* Preview Assets.xcassets in Resources */,
+				FA6386BB296E9E0E00A08BFD /* Localizable.strings in Resources */,
 				FA638651296C46D000A08BFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,8 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6386AF296DE8EB00A08BFD /* Database+Operations.swift in Sources */,
+				FA6386C1296EB65400A08BFD /* SavedAlarmList.swift in Sources */,
 				FA63867D296C817400A08BFD /* AlarmDetailScreen.swift in Sources */,
 				FA6386AA296DE29500A08BFD /* AlarmAppDB.xcdatamodeld in Sources */,
+				FA6386C6296EB7F100A08BFD /* ToggleView.swift in Sources */,
+				FA6386C3296EB72900A08BFD /* SavedAlarmLists.swift in Sources */,
 				FA63864F296C46CF00A08BFD /* HomeScreen.swift in Sources */,
 				FA638680296D3C8A00A08BFD /* AlarmOn.swift in Sources */,
 				FA6386A7296DDD6A00A08BFD /* TaskListScreen.swift in Sources */,
@@ -211,6 +245,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA6386BD296E9E0E00A08BFD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6386BC296E9E0E00A08BFD /* ar */,
+				FA6386BE296E9E1800A08BFD /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA638655296C46D000A08BFD /* Debug */ = {
