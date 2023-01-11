@@ -13,7 +13,7 @@ enum Day: String, CaseIterable, Identifiable {
     var id: String {
         self.rawValue
     }
-    
+    //app
     var title: String {
         switch self {
         case .sunday:
