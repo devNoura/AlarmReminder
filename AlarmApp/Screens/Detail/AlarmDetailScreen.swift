@@ -44,6 +44,7 @@ struct AlarmDetailScreen: View {
     @State var selectedDays: [Day] = []
     @State var showTaskList: Bool = false
     @State var isSnoozed: Bool = false
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     @Environment(\.dismiss) private var dismiss
     
@@ -172,7 +173,12 @@ struct AlarmDetailScreen: View {
     private var saveButton: some View {
         Button("Save") {
             names.append(selectedDate)
-            let _: () = DatabaseManager.shared.save()
+            let alermObject = AlarmObject(context: managedObjectContext)
+            alermObject.date = selectedDate
+//            alermObject.days = selectedDays
+//            alermObject.task =
+            
+            DatabaseManager.shared.save()
             
             // handle tap save
         }

@@ -4,6 +4,7 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="days" optional="YES" attributeType="String"/>
         <attribute name="snooze" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tasks" optional="YES" attributeType="String"/>
         <attribute name="uniqueId" optional="YES" attributeType="String"/>
     </entity>
     <entity name="TaskObject" representedClassName="TaskObject" syncable="YES" codeGenerationType="class">

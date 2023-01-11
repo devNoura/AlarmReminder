@@ -11,8 +11,8 @@ struct ContentView: View {
     @State var isEditing = false
     @State var selection = Set<String>()
     @State var issnoozed: Bool=false
-    
-    var names = ["4:13AM", "4:30AM", "7:45PM", "9:20Pm"]
+    @State var isOnFirstItem = false
+   var names = ["4:13AM", "4:30AM", "7:45PM", "9:20Pm"]
     
     
     var body: some View {
@@ -27,11 +27,11 @@ struct ContentView: View {
                     .padding(.top)
                 
                 
-                //Text("Sunday,12 Jan")
-                  // .multilineTextAlignment(.leading)
-                    //.foregroundColor(Color("text"))
-                   // .padding(.trailing, 250.0)
-                  //  .padding(.top)
+                Text("Sunday,12 Jan")
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(Color("text"))
+                    .padding(.trailing, 250.0)
+                    .padding(.top)
                 
                 
                 List(names, id: \.self, selection: $selection) { name in
@@ -40,35 +40,33 @@ struct ContentView: View {
                             .foregroundColor(Color("circle"))
                             .frame(height: 80)
                             .padding(.top)
-                            .overlay {
-                                Text(name)
-                                
-                                
-                   // List($users) {$users in
-                   // Text(user.name)
-                    //Spacer()
-                                
-                               // .labelsHidden()
                             
-                                
+                        
+                            .overlay {
+                               Text(name)
+                                 Toggle("", isOn: $isOnFirstItem)
+                                    .padding(.trailing)
+                                    .toggleStyle(SwitchToggleStyle(tint: Color("back")))
+                                  
                                 
                                 
                             }
-                        Toggle("User has been contacted",isOn: .constant(true))
-                            .toggleStyle(CheckToggleStyle())
-                        Toggle("", isOn: .constant(true))
+                     
                     }
-                    .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
+                    .cornerRadius(12)
+                    
                 }
-                
+                .onChange(of: isOnFirstItem, perform: { newValue in
+                    print("XSXSDSS")
+                })
                 .scrollContentBackground(.hidden)
                 .listStyle(.plain)
                 .foregroundColor(Color("text"))
                 .padding(.top)
                 .padding(.horizontal)
             }
-            .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).accentColor(Color("text"))
+            .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive)).accentColor(Color("blue2"))
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -76,12 +74,18 @@ struct ContentView: View {
                         self.isEditing.toggle()
                     } label: {
                         Text(isEditing ? "Delet" : "Edit")
+                        
                             .foregroundColor(Color("text"))
                             .padding(.bottom)
                             .background(Color("back"))
                         
+                        
+
+                        
                             .onAppear {
                                 UITableView.appearance().backgroundColor = .clear
+                               
+
                             }
                     }
                 }
