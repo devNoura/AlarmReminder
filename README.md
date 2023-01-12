@@ -1,4 +1,4 @@
-# AramReminder
+# Alarm Me
 <img width="826" alt="Screenshot 1444-06-19 at 11 21 05 AM" src="https://user-images.githubusercontent.com/116790274/212016275-f3d8f6aa-2d18-4b93-8b75-1e997cb8bcd9.png">
 
 Big idea
@@ -20,5 +20,8 @@ Cordata_ Over Voice_localization_Audio recording
 
 
 
-Uploading VIDEO-2023-01-12-02-04-31.mp4…
+
+
+
+https://user-images.githubusercontent.com/116790274/212022172-94e024de-5e18-4296-b09a-12a5c06b5065.mp4
 
