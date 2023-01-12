@@ -1,4 +1,6 @@
 # AramReminder
+<img width="826" alt="Screenshot 1444-06-19 at 11 21 05 AM" src="https://user-images.githubusercontent.com/116790274/212016275-f3d8f6aa-2d18-4b93-8b75-1e997cb8bcd9.png">
+
 Big idea
 Inclusion
 
@@ -16,4 +18,7 @@ Cordata_ Over Voice_localization_Audio recording
 
 
 
-<img width="826" alt="Screenshot 1444-06-19 at 11 21 05 AM" src="https://user-images.githubusercontent.com/116790274/212016275-f3d8f6aa-2d18-4b93-8b75-1e997cb8bcd9.png">
+
+
+Uploading VIDEO-2023-01-12-02-04-31.mp4…
+
